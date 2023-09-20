@@ -1,0 +1,24 @@
+{
+  "name": "atv_pw2",
+  "version": "1.0.0",
+  "description": "Atividade pratica de PW2, aplicando tudo que aprendemos este sementre.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "atv",
+    "pw2",
+    "pratica"
+  ],
+  "author": "Robson Henrique Moura Machado",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
