@@ -9,13 +9,13 @@ const produto = connection.define(
     'tbl_produto',
     {
         codigo_produto: {
-            type: sequelize.INTEGER.UNSIGNED,
+            type: sequelize.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true   
         },
 
         codigo_categoria: {
-            type: sequelize.INTEGER.UNSIGNED,
+            type: sequelize.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true   
         },
@@ -31,7 +31,7 @@ const produto = connection.define(
         },
 
         imagem_produto: {
-            type: sequelize.STRING(),
+            type: sequelize.STRING(500),
             allowNull: false
         },
         descricao_produto: {
@@ -43,6 +43,6 @@ const produto = connection.define(
 
 //sincronizando com banco de daods
 //criando a tabela caso não existente
-categoria.sync({forne:false})
+produto.sync({forne:false})
 
-module.exports = connection;
+module.exports = produto;

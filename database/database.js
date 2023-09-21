@@ -1,7 +1,6 @@
 //importando sequelize
 const sequelize = require("sequelize");
 
-
 // conectando com o banco de dados
 const connection = new sequelize(
     "atv_pw2",

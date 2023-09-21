@@ -9,7 +9,7 @@ const categoria = connection.define(
     'tbl_categoria',
     {
         codigo_categoria: {
-            type: sequelize.INTEGER.UNSIGNED,
+            type: sequelize.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             primaryKey: true   
         },
@@ -26,8 +26,8 @@ const categoria = connection.define(
     }
 );
 
-//sincronizando com banco de daods
+//sincronizando com banco de dados
 //criando a tabela caso não existente
 categoria.sync({forne:false})
 
-module.exports = connection;
+module.exports = categoria;
