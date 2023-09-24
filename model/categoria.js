@@ -2,7 +2,7 @@
 const sequelize = require("sequelize");
 
 // conectando com o banco de dados
-const connection = require ("../database/database")
+const connection = require("../database/database")
 
 //identificando tabela categoria
 const categoria = connection.define(
@@ -11,7 +11,7 @@ const categoria = connection.define(
         codigo_categoria: {
             type: sequelize.INTEGER(10).UNSIGNED,
             autoIncrement: true,
-            primaryKey: true   
+            primaryKey: true
         },
 
         nome_categoria: {
@@ -22,12 +22,21 @@ const categoria = connection.define(
         observacoes_categoria: {
             type: sequelize.TEXT,
             allowNull: false
+        },
+
+        teste: {
+            type: sequelize.STRING(69),
+        },
+
+        teste2: {
+            type: sequelize.STRING(69),
+            allowNull: false
         }
     }
 );
 
 //sincronizando com banco de dados
 //criando a tabela caso não existente
-categoria.sync({forne:false})
+categoria.sync({ force: false })
 
 module.exports = categoria;

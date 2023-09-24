@@ -3,23 +3,23 @@ const express = require('express');
 
 const categoriaModel = require("../model/categoria")
 
-const router = express.Router ();
+const rout = express.Router();
 
 //criando rotas
-router.post('/categoria/cadastrarCategoria',(req, res)=>{
-    res.send('Categoria cadastrado com sucesso.');
+rout.post('/categoria/cadastrarCategoria', (req, res) => {
+    res.send('Categoria cadastrada com sucesso.');
 });
 
-router.get('/categoria/listarCategoria',(req, res)=>{
+rout.get('/categoria/listarCategoria', (req, res) => {
     res.send('Categoria listada com sucesso.');
 });
 
-router.put('/categoria/alterarCategoria',(req, res)=>{
-    res.send('Categoria alterado com sucesso.');
+rout.put('/categoria/alterarCategoria', (req, res) => {
+    res.send('Categoria alterada com sucesso.');
 });
 
-router.delete('/categoria/excluirCategoria', (req, res) => {
-    res.send('Categoria excluído com sucesso.');
+rout.delete('/categoria/excluirCategoria', (req, res) => {
+    res.send('Categoria excluída com sucesso.');
 });
 
-module.exports = router;
+module.exports = rout;

@@ -2,22 +2,16 @@
 const sequelize = require("sequelize");
 
 // conectando com o banco de dados
-const connection = require ("../database/database")
+const connection = require("../database/database")
 
 //identificando tabela categoria
 const produto = connection.define(
-    'tbl_produto',
+    "tbl_produto",
     {
         codigo_produto: {
             type: sequelize.INTEGER(10).UNSIGNED,
             autoIncrement: true,
-            primaryKey: true   
-        },
-
-        codigo_categoria: {
-            type: sequelize.INTEGER(10).UNSIGNED,
-            autoIncrement: true,
-            primaryKey: true   
+            primaryKey: true
         },
 
         nome_produto: {
@@ -26,7 +20,7 @@ const produto = connection.define(
         },
 
         valor_produto: {
-            type: sequelize.DECIMAL(10,2),
+            type: sequelize.DECIMAL(10, 2),
             allowNull: false
         },
 
@@ -41,8 +35,8 @@ const produto = connection.define(
     }
 );
 
-//sincronizando com banco de daods
+//sincronizando com banco de dados
 //criando a tabela caso não existente
-produto.sync({forne:false})
+produto.sync({ force: false })
 
 module.exports = produto;
