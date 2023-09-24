@@ -22,15 +22,6 @@ const categoria = connection.define(
         observacoes_categoria: {
             type: sequelize.TEXT,
             allowNull: false
-        },
-
-        teste: {
-            type: sequelize.STRING(69),
-        },
-
-        teste2: {
-            type: sequelize.STRING(69),
-            allowNull: false
         }
     }
 );
