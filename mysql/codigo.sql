@@ -2,7 +2,7 @@ CREATE DATABASE atv_pw2;
 
 USE atv_pw2;
 
-CREATE TABLE tbl_produto(
+CREATE TABLE tbl_produtos(
 	codigo_produto INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     codigo_categoria INT(10) UNSIGNED NOT NULL, 
     nome_produto VARCHAR(255) NOT NULL,
@@ -17,6 +17,6 @@ CREATE TABLE tbl_categoria (
 	observacoes_categoria TEXT NOT NULL
 );
 
-ALTER TABLE tbl_produto ADD CONSTRAINT fk_tbl_categoria 
+ALTER TABLE tbl_produtos ADD CONSTRAINT fk_tbl_categoria 
 FOREIGN KEY (codigo_categoria)
 REFERENCES tbl_categoria(codigo_categoria);

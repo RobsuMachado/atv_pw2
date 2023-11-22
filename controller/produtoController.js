@@ -1,7 +1,7 @@
 // importando módulos de express
 const express = require('express');
 
-const produtoModel = require("../model/produto")
+const produtoModel = require("../model/produtos")
 
 const rout = express.Router();
 
